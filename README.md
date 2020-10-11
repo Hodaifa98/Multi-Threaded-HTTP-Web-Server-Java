@@ -26,7 +26,7 @@ This is the main project package that contains the classes directory. All packag
 | **HTTPMethod** | An enum of supported HTTP methods of the server. |
 | **HTTPServerLogger** (Yet to be implemented) | This class logs all information regarding the server: Errors, HTTP requests and responses... |
 
-<br>
+
 
 ## /docs
 This is the Javadocs directory. It contains full documentation of the project API in HTML format, extracted from the Java source code.
