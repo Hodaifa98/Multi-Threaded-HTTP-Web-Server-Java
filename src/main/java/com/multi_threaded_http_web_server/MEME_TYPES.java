@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 /**
  * This class contains all the supported MEME types 
- * and allows to determine the correct type based on a resource's file extension.
+ * and allows determining the correct type based on a resource's file extension.
  * @author Hodaifa98
  */
 public class MEME_TYPES {

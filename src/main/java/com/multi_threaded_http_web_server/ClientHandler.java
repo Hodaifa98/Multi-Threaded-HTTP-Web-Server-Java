@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  * The ClientHandler class that is responsible for
- * handling the client's HTTP request and response related.
+ * handling the client's HTTP request and related response.
  * @author Hodaifa98.
  */
 public class ClientHandler implements Runnable{
