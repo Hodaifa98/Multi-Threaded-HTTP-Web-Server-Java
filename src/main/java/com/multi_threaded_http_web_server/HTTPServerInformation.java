@@ -67,7 +67,7 @@ public class HTTPServerInformation {
         SUPPORTED_HTTP_STATUS.put(404, "Not Found");
         SUPPORTED_HTTP_STATUS.put(415, "Unsupported Media Type");
         SUPPORTED_HTTP_STATUS.put(500, "Internal Server Error");
-        SUPPORTED_HTTP_STATUS.put(501, "Version Not Supported");
+        SUPPORTED_HTTP_STATUS.put(501, "Not Implemented");
         SUPPORTED_HTTP_STATUS.put(505, "HTTP Version Not Supported");
     }
     
