@@ -62,18 +62,9 @@ It contains information such as: Project version, description, developers...
 # Usage
 ## Make and run the application
 - ```cd``` to the project directory.
-```
-javac -d . src\main\java\com\multi_threaded_http_web_server\*.java
-java -cp . com.multi_threaded_http_web_server/MainServerClass
-```
-
-- Optional: Configure the HTTPServerInformation class. And add custom error pages, forbidden directories, and other information...
-- Create a main class (MainServerClass.java is the default main class) that contains an entry static main method.
-- Crate an instance of HTTPServer class.
-- Invoke the HTTPServer's instance "startServer" method (Can take a custom port as a parameter, or use the default port defined in HTTPServer).
     ```
-    HTTPServer server = new HTTPServer();
-    server.startServer();
+    javac -d . src\main\java\com\multi_threaded_http_web_server\*.java
+    java -cp . com.multi_threaded_http_web_server/MainServerClass
     ```
 
 - Access localhost:port_number for the index page, or specify the name of a request resource (or full path).
@@ -83,6 +74,15 @@ java -cp . com.multi_threaded_http_web_server/MainServerClass
     localhost:8080/test_files/video_test.mp4
     ```
 
+Optional configuration and running from an IDE:
+- Configure the HTTPServerInformation class. And add custom error pages, forbidden directories, and other information...
+- Create a main class (MainServerClass.java is the default main class) that contains an entry static main method.
+- Crate an instance of HTTPServer class.
+- Invoke the HTTPServer's instance "startServer" method (Can take a custom port as a parameter, or use the default port defined in HTTPServer).
+    ```
+    HTTPServer server = new HTTPServer();
+    server.startServer();
+    ```
 
 # Technical details
 ## Supported HTTP version
