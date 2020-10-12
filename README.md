@@ -148,6 +148,14 @@ It contains information such as: Project version, description, developers...
 - Implement the rest of HTTP methods.
 - Implement more MIME types.
 - Add "if-modified-since" response header.
+- Add more HTTP response headers.
+- HTTP authentication.
+- Protect against HTTP Response Splitting.
+- Daemon mode.
+- Configuration support for custom urls.
+- Security.
+- Optional: Dynamic reply generation, e.g. Servlets or JWIG...
+- Optional: WSGI support.
 
 # References
 This HTTP server is written per the standard HTTP specification initiated by the World-Wide Web global information initiative.
