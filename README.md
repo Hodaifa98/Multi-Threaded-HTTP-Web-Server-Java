@@ -1,5 +1,5 @@
 # Multi-Threaded-HTTP-Web-Server-Java
-A Multi Threaded HTTP Web Server in Java
+A Multi Threaded HTTP Web Server in Java.
 
 # Introduction
 This is a non-blocking, multi-threaded HTTP web server written in Java. It uses the native ServerSocket and Socket classes. 
@@ -7,6 +7,11 @@ It allows you to define your public directory, as well as unauthorized directori
 In the case of HTTP request to resources with large data, the server uses a buffer which allows for more efficient responses and writing to clients' output stream.
 
 It serves at the moment static files only.
+
+
+# Documentation:
+https://hodaifa98.github.io/Multi-Threaded-HTTP-Web-Server-Java/
+
 
 # Structure
 These are the current main classes of the project:
@@ -32,7 +37,7 @@ This is the main project package that contains the classes directory. All packag
 This is the Javadocs directory. It contains full documentation of the project API in HTML format, extracted from the Java source code.
 
 ## /www
-The default directory for all resources related to the HTTP server. This includes public resources (web-pages, documents, stylesheets, scripts, media files...), config files, and even error pages.
+The default directory for all resources related to the HTTP server. This includes public resources (web-pages, documents, stylesheets, scripts, media files...), config files, and even error pages (Can be changed to a different directory in HTTPServerInformation).
 
 By default, all files in this folder are accessible by a client making an HTTP request, unless the server owner add certain subdirectories to the server's forbidden directories in the HTTPServerInformation class.
 
@@ -57,7 +62,7 @@ It contains information such as: Project version, description, developers...
 # Usage
 - Optional: Configure the HTTPServerInformation class. And add custom error pages, forbidden directories, and other information...
 - Create a main class (MainServerClass.java is the default main class) that contains an entry static main method.
-- Initiate an instance of HTTPServer class.
+- Crate an instance of HTTPServer class.
 - Invoke the HTTPServer's instance "startServer" method (Can take a custom port as a parameter, or use the default port defined in HTTPServer).
     ```
     HTTPServer server = new HTTPServer();
@@ -73,9 +78,80 @@ It contains information such as: Project version, description, developers...
 
 
 # Technical details
+## Supported HTTP version
+- HTTP/1.1
 
+## Supported HTTP methods
+- GET
+- POST
+- HEAD
+- OPTIONS
 
+## Supported HTTP response status
+| Code | Description |
+| ----------- | ----------- |
+| 200 | OK |
+| 204 | No Content |
+| 400 | Bad Request |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 415 | Unsupported Media Type |
+| 500 | Internal Server Error |
+| 501 | Not Implemented |
+| 505 | HTTP Version Not Supported |
 
+<br>
 
-# Documentation:
-https://hodaifa98.github.io/Multi-Threaded-HTTP-Web-Server-Java/
+## Supported MIME types
+| File extension | MIME type |
+| ----------- | ----------- |
+| jpeg|image/jpeg
+| jpg|image/jpg
+| png|image/png
+| bmp|image/bmp
+| gif|image/gif
+| svg|image/svg+xml
+| ico|image/image/x-icon
+| txt|text/plain
+| pdf|application/pdf
+| ppt|application/vnd.ms-powerpoint
+| doc|application/msword
+| docx|application/vnd.openxmlformats-officedocument.wordprocessingml.document
+| htm|text/html
+| html|text/html
+| xml|text/xml
+| css|text/css
+| js|text/javascript
+| json|application/json
+| csv|text/csv
+| mp4|video/mp4
+| mpeg|video/mpeg
+| avi|video/x-msvideo
+| 3gpp|video/3gpp
+| wmv|video/x-ms-wmv
+| flv|video/x-flv
+| webm|video/webm
+| mp3|audio/mp3
+| ogg|audio/ogg
+| acc|audio/acc
+| amr|audio/amr
+| rar|application/vnd.rar
+| zip|application/zip
+| sql|application/sql
+
+<br>
+
+## To-do
+- Implement a logger class.
+- Log the number of requests for any resource.
+- Add a proper config file instead of relying on ServerInformationClass for dynamic configuration.
+- Implement the rest of HTTP methods.
+- Implement more MIME types.
+- Add "if-modified-since" response header.
+
+# References
+This HTTP server is written per the standard HTTP specification initiated by the World-Wide Web global information initiative.
+
+This project adheres to the protocol referred to as "HTTP1/.1".
+
+Link to the specification: [RFC 2616](https://tools.ietf.org/html/rfc2616).
