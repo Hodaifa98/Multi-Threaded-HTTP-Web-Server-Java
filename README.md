@@ -151,6 +151,7 @@ It contains information such as: Project version, description, developers...
 - Add more HTTP response headers.
 - HTTP authentication.
 - Protect against HTTP Response Splitting.
+- Protect against CRLF Injection Attacks.
 - Daemon mode.
 - Configuration support for custom urls.
 - Security.
