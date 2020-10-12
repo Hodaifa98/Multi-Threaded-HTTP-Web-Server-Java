@@ -60,6 +60,13 @@ It contains information such as: Project version, description, developers...
 
 
 # Usage
+## Make and run the application
+- ```cd``` to the project directory.
+```
+javac -d . src\main\java\com\multi_threaded_http_web_server\*.java
+java -cp . com.multi_threaded_http_web_server/MainServerClass
+```
+
 - Optional: Configure the HTTPServerInformation class. And add custom error pages, forbidden directories, and other information...
 - Create a main class (MainServerClass.java is the default main class) that contains an entry static main method.
 - Crate an instance of HTTPServer class.
